@@ -21,7 +21,7 @@ export function RevenueChart() {
           <h2 className="font-serif text-2xl">Revenue</h2>
           <p className="text-sm text-muted-foreground">Monthly recurring revenue, last 12 months</p>
         </div>
-        <p className="font-serif text-2xl text-primary">$42,500</p>
+        <p className="font-sans text-2xl font-semibold tracking-tight tabular-nums text-primary">$42,500</p>
       </div>
       <svg viewBox={`0 0 ${W} ${H}`} className="h-auto w-full" role="img" aria-label="Revenue chart">
         {ticks.map((t) => (
