@@ -33,3 +33,17 @@ export const funnel = [
   { stage: "Trial Signups", value: 6260, percent: 13 },
   { stage: "Paid Conversions", value: 1150, percent: 2.4 },
 ];
+
+export const customers = [
+  { id: "1", name: "Northwind Labs", email: "billing@northwind.io", plan: "Enterprise", mrr: 4200, status: "Active" },
+  { id: "2", name: "Acme Robotics", email: "ops@acmerobotics.com", plan: "Growth", mrr: 890, status: "Active" },
+  { id: "3", name: "Halcyon Health", email: "finance@halcyon.health", plan: "Growth", mrr: 890, status: "Trial" },
+  { id: "4", name: "Brightpath Media", email: "hello@brightpath.co", plan: "Starter", mrr: 149, status: "Active" },
+  { id: "5", name: "Orbital Freight", email: "ap@orbitalfreight.com", plan: "Enterprise", mrr: 3600, status: "Churned" },
+];
+
+export const invoices = [
+  { id: "INV-2026-010", date: "Oct 1, 2026", amount: 499, status: "Paid" },
+  { id: "INV-2026-009", date: "Sep 1, 2026", amount: 499, status: "Paid" },
+  { id: "INV-2026-008", date: "Aug 1, 2026", amount: 399, status: "Paid" },
+];
