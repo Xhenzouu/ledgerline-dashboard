@@ -1,24 +1,43 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Header } from "@/components/dashboard/Header";
+import { MetricCard } from "@/components/dashboard/MetricCard";
+import { RevenueChart } from "@/components/dashboard/RevenueChart";
+import { Transactions } from "@/components/dashboard/Transactions";
+import { ConversionFunnel } from "@/components/dashboard/ConversionFunnel";
+import { metrics } from "@/data/mockData";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Overview — Ledgerline Analytics" },
+      { name: "description", content: "MRR, active users, churn and revenue trends at a glance." },
+      { property: "og:title", content: "Overview — Ledgerline Analytics" },
+      { property: "og:description", content: "MRR, active users, churn and revenue trends at a glance." },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
-    </div>
+    <>
+      <Header title="Overview" subtitle="Welcome back. Here's how your business is performing." />
+      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {metrics.map((m) => (
+          <MetricCard key={m.title} {...m} />
+        ))}
+      </div>
+      <div className="mt-6">
+        <RevenueChart />
+      </div>
+      <div className="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-5">
+        <div className="lg:col-span-3">
+          <Transactions />
+        </div>
+        <div className="lg:col-span-2">
+          <ConversionFunnel />
+        </div>
+      </div>
+    </>
   );
 }
