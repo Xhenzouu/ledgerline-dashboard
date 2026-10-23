@@ -7,7 +7,7 @@ export function MetricCard({ title, value, change }: { title: string; value: str
     <div className="rounded-lg border border-border bg-card p-5">
       <p className="text-sm text-muted-foreground">{title}</p>
       <div className="mt-3 flex items-end justify-between gap-2">
-        <p className="font-serif text-3xl">{value}</p>
+        <p className="font-sans text-3xl font-semibold tracking-tight tabular-nums">{value}</p>
         <span
           className={cn(
             "inline-flex items-center gap-0.5 rounded-full px-2 py-0.5 text-xs font-medium",

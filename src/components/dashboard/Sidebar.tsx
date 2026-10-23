@@ -39,10 +39,10 @@ export function Sidebar({ open, onClose }: { open: boolean; onClose: () => void 
                 to={i.url}
                 onClick={onClose}
                 className={cn(
-                  "flex items-center gap-3 rounded-md border-l-2 px-3 py-2 text-sm transition-colors",
+                  "flex items-center gap-3 rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   active
-                    ? "border-primary bg-sidebar-accent text-foreground"
-                    : "border-transparent text-muted-foreground hover:bg-sidebar-accent hover:text-foreground",
+                    ? "bg-sidebar-accent text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 <i.icon className={cn("h-4 w-4", active && "text-primary")} strokeWidth={1.75} />
