@@ -1,26 +1,40 @@
-# Ledgerline Dashboard
+# Ledgerline — SaaS Analytics Dashboard
 
-Implement exactly the screenshot and nothing else
+A premium, multi-page B2B SaaS analytics dashboard designed to rival the UI of Stripe and Vercel. Built with React and Tailwind CSS, featuring custom SVG data visualizations with zero external chart libraries.
 
-This project was built with [Lovable](https://lovable.dev).
+**Live Demo:** [ledgerline-dashboard.lovable.app](https://ledgerline-dashboard.lovable.app)
 
-**Live app**: https://ledgerline-dashboard.lovable.app
+## Features
 
-## Build with Lovable
+- **Multi-Page Routing:** Fully functional sidebar navigation (Dashboard, Analytics, Customers, Billing, Settings).
+- **KPI Cards:** Data grids for MRR, Active Users, Churn Rate, and ARPU with conditional positive/negative styling.
+- **Custom SVG Charts:** A 12-month revenue area chart built using pure React SVG `<polyline>` and `<polygon>` elements (no Recharts or Chart.js).
+- **Data Tables & Funnels:** Clean recent transactions table and a pure CSS conversion funnel.
+- **Premium Dark UI:** Strict flat charcoal design system with no gradients or glowing effects.
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/62dee612-f3b1-45f2-bcf0-802ce95dbfcd).
+## Tech Stack
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+- **Frontend:** React, TypeScript, Tailwind CSS
+- **Icons:** Lucide React
+- **Routing:** React Router (or equivalent)
 
-## Development
+## Run Locally
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+1. Clone the repo:
 
-```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
-npm run dev
-```
+   ```bash
+   git clone https://github.com/Xhenzouu/ledgerline-dashboard.git
+   cd ledgerline-dashboard
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
